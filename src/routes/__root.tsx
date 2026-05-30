@@ -72,7 +72,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           "ClariSolve Tech helps businesses grow through websites, web apps, automation, AI, QA and digital marketing. Turning complexity into clarity.",
       },
       { name: "author", content: "ClariSolve Tech" },
-      { name: "theme-color", content: "#1d3a6b" },
+      { name: "theme-color", content: "#0a0a0c" },
       { property: "og:title", content: "ClariSolve Tech — Understand. Simplify. Solve." },
       {
         property: "og:description",

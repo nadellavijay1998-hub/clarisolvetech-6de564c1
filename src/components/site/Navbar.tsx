@@ -36,9 +36,9 @@ export function Navbar() {
           : "bg-background/60 backdrop-blur"
       }`}
     >
-      <div className="container-narrow flex h-16 md:h-20 items-center justify-between">
+      <div className="container-narrow flex h-20 md:h-24 items-center justify-between">
         <Link to="/" className="flex items-center gap-2 shrink-0" onClick={() => setOpen(false)}>
-          <img src={logo} alt="ClariSolve Tech" className="h-9 md:h-11 w-auto" />
+          <img src={logo} alt="ClariSolve Tech" className="h-14 md:h-20 w-auto" />
         </Link>
 
         <nav className="hidden md:flex items-center gap-1">
