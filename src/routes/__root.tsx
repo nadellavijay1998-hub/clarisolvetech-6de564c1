@@ -81,6 +81,12 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:type", content: "website" },
       { property: "og:site_name", content: "ClariSolve Tech" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "ClariSolve Tech — Understand. Simplify. Solve." },
+      { name: "description", content: "ClariSolve Tech builds custom websites, web applications, and automation solutions to simplify complexity and drive business growth." },
+      { property: "og:description", content: "ClariSolve Tech builds custom websites, web applications, and automation solutions to simplify complexity and drive business growth." },
+      { name: "twitter:description", content: "ClariSolve Tech builds custom websites, web applications, and automation solutions to simplify complexity and drive business growth." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/5547b7b1-9bb4-4306-8931-047766300e54/id-preview-0dd9484a--b65c68f0-06ca-4adf-9fb0-c15b39f951a3.lovable.app-1780121225206.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/5547b7b1-9bb4-4306-8931-047766300e54/id-preview-0dd9484a--b65c68f0-06ca-4adf-9fb0-c15b39f951a3.lovable.app-1780121225206.png" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
