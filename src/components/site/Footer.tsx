@@ -7,7 +7,7 @@ export function Footer() {
     <footer className="mt-20 border-t border-border bg-surface">
       <div className="container-narrow py-14 grid gap-10 md:grid-cols-12">
         <div className="md:col-span-5">
-          <img src={logo} alt="ClariSolve Tech" className="h-12 w-auto" />
+          <img src={logo} alt="ClariSolve Tech" className="h-20 w-auto" />
           <p className="mt-4 text-sm leading-relaxed text-muted-foreground max-w-md">
             ClariSolve Tech helps businesses turn complexity into clarity — through websites,
             web applications, automation, and AI that create real, measurable value.
