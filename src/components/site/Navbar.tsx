@@ -64,14 +64,14 @@ export function Navbar() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label={label}
-              className="p-2 rounded-md text-muted-foreground hover:text-primary-light hover:bg-secondary transition-colors"
+              className="p-2 rounded-md text-white/70 hover:text-white hover:bg-white/10 transition-colors"
             >
               <Icon className="h-4 w-4" />
             </a>
           ))}
           <Link
             to="/contact"
-            className="ml-2 inline-flex items-center rounded-full bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground hover:bg-primary-light transition-colors"
+            className="ml-2 inline-flex items-center rounded-full bg-primary-light px-4 py-2 text-sm font-semibold text-white hover:opacity-90 transition-opacity"
           >
             Get Started
           </Link>
@@ -80,8 +80,9 @@ export function Navbar() {
         <button
           onClick={() => setOpen((v) => !v)}
           aria-label="Toggle menu"
-          className="md:hidden p-2 rounded-md hover:bg-secondary"
+          className="md:hidden p-2 rounded-md hover:bg-white/10 text-white"
         >
+
           {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
         </button>
       </div>
