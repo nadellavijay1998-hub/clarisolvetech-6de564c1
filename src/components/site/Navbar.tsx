@@ -30,15 +30,15 @@ export function Navbar() {
 
   return (
     <header
-      className={`sticky top-0 z-50 w-full transition-all ${
+      className={`sticky top-0 z-50 w-full transition-all text-white ${
         scrolled
-          ? "bg-background/85 backdrop-blur-md border-b border-border shadow-[0_1px_0_0_oklch(0.91_0.012_245)]"
-          : "bg-background/60 backdrop-blur"
+          ? "bg-[oklch(0.14_0.02_252)]/95 backdrop-blur-md border-b border-white/10 shadow-lg"
+          : "bg-[oklch(0.12_0.02_252)]/90 backdrop-blur"
       }`}
     >
-      <div className="container-narrow flex h-16 md:h-20 items-center justify-between">
+      <div className="container-narrow flex h-20 md:h-24 items-center justify-between">
         <Link to="/" className="flex items-center gap-2 shrink-0" onClick={() => setOpen(false)}>
-          <img src={logo} alt="ClariSolve Tech" className="h-9 md:h-11 w-auto" />
+          <img src={logo} alt="ClariSolve Tech" className="h-12 md:h-16 w-auto" />
         </Link>
 
         <nav className="hidden md:flex items-center gap-1">
@@ -46,14 +46,15 @@ export function Navbar() {
             <Link
               key={item.to}
               to={item.to}
-              className="px-4 py-2 text-sm font-medium text-foreground/75 hover:text-foreground rounded-md transition-colors"
-              activeProps={{ className: "text-foreground bg-secondary" }}
+              className="px-4 py-2 text-sm font-medium text-white/75 hover:text-white rounded-md transition-colors"
+              activeProps={{ className: "text-white bg-white/10" }}
               activeOptions={{ exact: item.to === "/" }}
             >
               {item.label}
             </Link>
           ))}
         </nav>
+
 
         <div className="hidden md:flex items-center gap-1">
           {socials.map(({ href, label, Icon }) => (
@@ -63,14 +64,14 @@ export function Navbar() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label={label}
-              className="p-2 rounded-md text-muted-foreground hover:text-primary-light hover:bg-secondary transition-colors"
+              className="p-2 rounded-md text-white/70 hover:text-white hover:bg-white/10 transition-colors"
             >
               <Icon className="h-4 w-4" />
             </a>
           ))}
           <Link
             to="/contact"
-            className="ml-2 inline-flex items-center rounded-full bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground hover:bg-primary-light transition-colors"
+            className="ml-2 inline-flex items-center rounded-full bg-primary-light px-4 py-2 text-sm font-semibold text-white hover:opacity-90 transition-opacity"
           >
             Get Started
           </Link>
@@ -79,8 +80,9 @@ export function Navbar() {
         <button
           onClick={() => setOpen((v) => !v)}
           aria-label="Toggle menu"
-          className="md:hidden p-2 rounded-md hover:bg-secondary"
+          className="md:hidden p-2 rounded-md hover:bg-white/10 text-white"
         >
+
           {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
         </button>
       </div>
