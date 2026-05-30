@@ -32,8 +32,8 @@ export function Navbar() {
     <header
       className={`sticky top-0 z-50 w-full transition-all ${
         scrolled
-          ? "bg-background/85 backdrop-blur-md border-b border-border shadow-[0_1px_0_0_oklch(0.91_0.012_245)]"
-          : "bg-background/60 backdrop-blur"
+          ? "bg-white/95 backdrop-blur-md border-b border-white/40 shadow-[0_1px_24px_-8px_rgba(0,0,0,0.35)]"
+          : "bg-white/85 backdrop-blur-md border-b border-white/30"
       }`}
     >
       <div className="container-narrow flex h-20 md:h-24 items-center justify-between">
@@ -46,8 +46,8 @@ export function Navbar() {
             <Link
               key={item.to}
               to={item.to}
-              className="px-4 py-2 text-sm font-medium text-foreground/75 hover:text-foreground rounded-md transition-colors"
-              activeProps={{ className: "text-foreground bg-secondary" }}
+              className="px-4 py-2 text-sm font-medium text-slate-700 hover:text-primary rounded-md transition-colors"
+              activeProps={{ className: "text-primary bg-slate-100" }}
               activeOptions={{ exact: item.to === "/" }}
             >
               {item.label}
@@ -63,7 +63,7 @@ export function Navbar() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label={label}
-              className="p-2 rounded-md text-muted-foreground hover:text-primary-light hover:bg-secondary transition-colors"
+              className="p-2 rounded-md text-slate-600 hover:text-primary hover:bg-slate-100 transition-colors"
             >
               <Icon className="h-4 w-4" />
             </a>
@@ -79,7 +79,7 @@ export function Navbar() {
         <button
           onClick={() => setOpen((v) => !v)}
           aria-label="Toggle menu"
-          className="md:hidden p-2 rounded-md hover:bg-secondary"
+          className="md:hidden p-2 rounded-md text-slate-700 hover:bg-slate-100"
         >
           {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
         </button>
