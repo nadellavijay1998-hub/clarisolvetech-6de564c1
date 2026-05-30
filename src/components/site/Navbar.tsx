@@ -30,15 +30,15 @@ export function Navbar() {
 
   return (
     <header
-      className={`sticky top-0 z-50 w-full transition-all ${
+      className={`sticky top-0 z-50 w-full transition-all text-white ${
         scrolled
-          ? "bg-background/85 backdrop-blur-md border-b border-border shadow-[0_1px_0_0_oklch(0.91_0.012_245)]"
-          : "bg-background/60 backdrop-blur"
+          ? "bg-[oklch(0.14_0.02_252)]/95 backdrop-blur-md border-b border-white/10 shadow-lg"
+          : "bg-[oklch(0.12_0.02_252)]/90 backdrop-blur"
       }`}
     >
-      <div className="container-narrow flex h-16 md:h-20 items-center justify-between">
+      <div className="container-narrow flex h-20 md:h-24 items-center justify-between">
         <Link to="/" className="flex items-center gap-2 shrink-0" onClick={() => setOpen(false)}>
-          <img src={logo} alt="ClariSolve Tech" className="h-9 md:h-11 w-auto" />
+          <img src={logo} alt="ClariSolve Tech" className="h-12 md:h-16 w-auto" />
         </Link>
 
         <nav className="hidden md:flex items-center gap-1">
@@ -46,14 +46,15 @@ export function Navbar() {
             <Link
               key={item.to}
               to={item.to}
-              className="px-4 py-2 text-sm font-medium text-foreground/75 hover:text-foreground rounded-md transition-colors"
-              activeProps={{ className: "text-foreground bg-secondary" }}
+              className="px-4 py-2 text-sm font-medium text-white/75 hover:text-white rounded-md transition-colors"
+              activeProps={{ className: "text-white bg-white/10" }}
               activeOptions={{ exact: item.to === "/" }}
             >
               {item.label}
             </Link>
           ))}
         </nav>
+
 
         <div className="hidden md:flex items-center gap-1">
           {socials.map(({ href, label, Icon }) => (
